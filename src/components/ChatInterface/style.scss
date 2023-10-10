@@ -1,0 +1,109 @@
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-popup {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .chat-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        button{
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        img{
+            width: 8%;
+            border-radius: 5px;
+        }
+    }
+    .chat-body{
+        overflow-y: scroll;
+        height: 350px;
+        margin: 10px;
+        .message{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            border-bottom: 1px solid lightgrey;
+            margin: 10px;  
+        }
+        .user-assistant{
+            border-radius: 2px;
+            margin: 10px 5px 10px 2px;
+        }
+        .icon{
+            border: 1px solid lightgrey;
+            padding: 3px;
+            font-size: 14px;
+        }
+        .img{
+            width: 5%;
+            height: 5%;
+        }
+        .user-message{
+            align-items: center;
+        }
+        .assistant-message{
+            align-items: baseline;
+        }
+    }
+    .empty-state{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        img{
+            width: 40%;
+        }
+        span{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    .chat-footer{
+        padding-right: 10px;
+        .input-box{
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px;
+            border: 1px solid grey;
+        }
+    }
+    p{
+        text-align: end;
+        font-size: 8px;
+        span{
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-popup{
+        .chat-header{
+            button{
+                font-size: 10px;
+            }
+        }
+        .empty-state{
+            span{
+                font-size: 12px;
+            }
+        }    
+    }
+}
