@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Chat Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+OpenChat is a versatile, open-source chat interface component designed with a singular mission in mind: to encourage community contributions and make the chat experience accessible and seamless for any application.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Chat Messages](#chat-messages)
+- [Reset Chat](#reset-chat)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To use the Embeddable Chat Component, follow these installation steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository to your local machine:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/ezgikorkmmaz/indexTechCase.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
 
-### `npm run build`
+   ```bash
+   cd indexTechCase
+   
+3. Install the necessary dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Launch the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm start
 
-### `npm run eject`
+5. It is now accessible locally at http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
+ ```bash
+import ChatInterface from './components/ChatInterface';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<ChatInterface
+  primaryColor="#3498db"
+  onSubmit={handleChatMessage}
+  messages={chatMessages}
+  emptyState={emptyStateImage}
+  profilePic={userProfileImage}
+/>
+ ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Customization
+OpenChat is customizable, ensuring it seamlessly aligns with your application's aesthetics and requirements. For instance, you can easily change the primary color:
+ ```bash
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<ChatInterface primaryColor="#ff5722" />
+ ```
+## Chat Messages
+Chat messages are structured as objects with role and content properties. Messages can be managed using the messages prop.
 
-## Learn More
+## Reset Chat
+To reset the chat and start a new conversation, you can use a "Reset Chat" button. For example:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ ```bash
+<ChatInterface
+  // ... other props
+/>
+<button onClick={handleResetChat} className="">
+  Reset Chat
+</button>
+ ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
